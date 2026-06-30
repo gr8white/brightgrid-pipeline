@@ -43,6 +43,7 @@ def generate_batch(n_meters=100, batch_id=1, fault_rate=0.05):
             "status":           status,
             "reading_ts":       (now - timedelta(minutes=random.randint(0, 45))).isoformat(),
             "firmware_version": random.choice(FIRMWARE),
+            "signal_strength":  random.randint(1, 5)
         })
 
     path = Path(VOLUME_PATH)
